@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Button } from "../styled/Button";
 
-const GameStart = () => {
+const GameStart = ({ toggle }) => {
   return (
     <Container>
       <div>
@@ -9,7 +10,7 @@ const GameStart = () => {
 
       <div className="content">
         <h1>Dice Game</h1>
-        <Button>Play Now</Button>
+        <Button onClick={toggle}>Play Now</Button>
       </div>
     </Container>
   );
@@ -28,22 +29,5 @@ const Container = styled.div`
     font-size: 96px;
     white-space: nowrap;
     margin: 0;
-  }
-`;
-
-const Button = styled.div`
-  max-width: 220px;
-  max-height: 44px;
-  background-color: black;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 5px;
-  font-size: 16px;
-  text-align: center;
-
-  &:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
   }
 `;
